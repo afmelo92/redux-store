@@ -127,15 +127,88 @@ export const Content = styled.div`
     width: 100%;
     justify-content: space-around;
 
-    img {
-      width: 30%;
-      margin: 0 15px;
+    a {
+      img {
+        width: 380px;
+      }
     }
+  }
+`;
+
+export const MainSpotLightCarousel = styled.div`
+  padding-right: 5px;
+  margin-bottom: 50px;
+
+  .rec {
+    margin: 0 auto;
+    max-width: 1280px;
+  }
+
+  .rec.rec-slider-container {
+    width: 100%;
+  }
+
+  .rec.rec-arrow {
+    background: none;
+    color: ${props => props.theme.color.secondary};
+    opacity: 0.5;
+  }
+
+  .rec.rec-arrow-right {
+    border: none;
+    box-shadow: none;
+    margin-left: 15px;
+  }
+
+  .rec.rec-arrow-left {
+    border: none;
+    box-shadow: none;
+  }
+  /* round buttons on hover */
+  .rec.rec-arrow:hover {
+    background: none;
+    color: ${props => props.theme.color.primary};
+    border-radius: 50%;
+    opacity: 1;
+  }
+  /* hide disabled buttons */
+  .rec.rec-arrow:disabled {
+    visibility: hidden;
+  }
+  /* disable default outline on focused items */
+  /* add custom outline on focused items */
+  .rec-carousel-item:focus {
+    outline: none;
+    box-shadow: inset 0 0 1px 1px ${props => props.theme.color.secondary};
+  }
+
+  .rec.rec-pagination {
+    display: none;
+  }
+
+  button.brcpxa {
+    background-color: ${props => props.theme.color.secondary};
+    box-shadow: 0 0 1px 3px ${props => props.theme.color.secondary};
+  }
+
+  button.brcpxa:hover,
+  button.brcpxa:active,
+  button.brcpxa:focus {
+    box-shadow: 0 0 1px 3px ${props => props.theme.color.secondary};
+  }
+
+  button.ikyGAt {
+    /* box-shadow: 0 0 1px 2px ${props => props.theme.color.secondary};*/
+  }
+
+  button.ikyGAt:hover {
+    box-shadow: 0 0 1px 3px ${props => props.theme.color.secondary};
   }
 `;
 
 export const SpotLightCarousel = styled.div`
   padding-right: 5px;
+  margin-bottom: 50px;
 
   .rec {
     margin: 0 auto;

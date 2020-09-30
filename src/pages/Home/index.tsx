@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 
 import cards from '../../assets/cards.png';
 import Item from '../../components/Carousel/Item';
+import MainShopItem from '../../components/Carousel/MainShopItem';
 import ShopItem from '../../components/Carousel/ShopItem';
 import Header from '../../components/Header';
 
@@ -20,6 +21,7 @@ import {
   Content,
   Secure,
   SpotLight,
+  MainSpotLightCarousel,
   SpotLightCarousel,
   Footer,
 } from './styles';
@@ -54,48 +56,50 @@ const Home: React.FC = () => {
       </Secure>
       <Content>
         <div className="shop-row-1">
-          <div className="red-square">
+          <Link to="/">
             <img
               src="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/0x0-1497214986.jpg"
               alt="vestuario"
             />
+          </Link>
+          <Link to="/">
             <img
               src="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/0x0-2204818397.jpg"
               alt="acessorios"
             />
+          </Link>
+          <Link to="/">
             <img
               src="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/0x0-4159844946.jpg"
               alt="multimarcas"
             />
-          </div>
-          <div className="green-square" />
-          <div className="yellow-square" />
+          </Link>
         </div>
       </Content>
       <SpotLight className="secure-row">
         <h1>DESTAQUES</h1>
       </SpotLight>
-      <SpotLightCarousel>
+      <MainSpotLightCarousel>
         <Carousel
           itemsToShow={4}
           itemsToScroll={2}
           enableAutoPlay
           autoPlaySpeed={5000}
         >
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2881090077.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-1549712095.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2419643259.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2213214189.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2386037471.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-3384074481.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-783552422.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-1041716793.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-418580030.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2653395609.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2377442026.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-1041716793.jpg" />
+          <MainShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2881090077.jpg" />
+          <MainShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-1549712095.jpg" />
+          <MainShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2419643259.jpg" />
+          <MainShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2213214189.jpg" />
+          <MainShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2386037471.jpg" />
+          <MainShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-3384074481.jpg" />
+          <MainShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-783552422.jpg" />
+          <MainShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-1041716793.jpg" />
+          <MainShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-418580030.jpg" />
+          <MainShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2653395609.jpg" />
+          <MainShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2377442026.jpg" />
+          <MainShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-1041716793.jpg" />
         </Carousel>
-      </SpotLightCarousel>
+      </MainSpotLightCarousel>
       <SpotLightCarousel>
         <Carousel
           itemsToShow={4}
@@ -122,20 +126,19 @@ const Home: React.FC = () => {
           itemsToShow={4}
           itemsToScroll={2}
           enableAutoPlay
-          autoPlaySpeed={5000}
+          autoPlaySpeed={10000}
         >
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2881090077.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-1549712095.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2419643259.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2213214189.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2386037471.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-3384074481.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-783552422.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-1041716793.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-418580030.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2653395609.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2377442026.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-1041716793.jpg" />
+          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2217692917.png" />
+          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-3693353354.jpg" />
+          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-3538900551.jpg" />
+          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2483465051.jpg" />
+          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-1969999859.jpg" />
+          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-4166572252.jpg" />
+          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-738825240.jpg" />
+          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-1598146235.png" />
+          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-1216331078.jpg" />
+          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2234268191.jpg" />
+          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-927134102.png" />
         </Carousel>
       </SpotLightCarousel>
       <SpotLightCarousel>
@@ -143,20 +146,16 @@ const Home: React.FC = () => {
           itemsToShow={4}
           itemsToScroll={2}
           enableAutoPlay
-          autoPlaySpeed={5000}
+          autoPlaySpeed={10000}
         >
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2881090077.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-1549712095.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2419643259.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2213214189.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2386037471.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-3384074481.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-783552422.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-1041716793.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-418580030.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2653395609.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2377442026.jpg" />
-          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-1041716793.jpg" />
+          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-2030634632.jpg" />
+          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-623274411.jpg" />
+          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-706887579.jpg" />
+          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-1649922133.jpg" />
+          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-3445314956.jpg" />
+          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-1550169029.jpg" />
+          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-1625079579.jpg" />
+          <ShopItem source="https://braavo-cache.nyc3.cdn.digitaloceanspaces.com/ntc/300x450-1304082355.jpg" />
         </Carousel>
       </SpotLightCarousel>
       <Footer>
