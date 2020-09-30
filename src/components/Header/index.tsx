@@ -30,13 +30,13 @@ const Header: React.FC = () => {
           <img src={logo} alt="logo" />
           <NavItems>
             <Link to="/">
-              <h3>Products</h3>
+              <h3>Vestuário</h3>
             </Link>
             <Link to="/">
-              <h3>Developers</h3>
+              <h3>Acessórios</h3>
             </Link>
             <Link to="/">
-              <h3>Contact</h3>
+              <h3>Contato</h3>
             </Link>
           </NavItems>
 

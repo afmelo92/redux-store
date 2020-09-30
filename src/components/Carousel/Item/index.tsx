@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { Container } from './styles';
 
@@ -9,9 +10,9 @@ interface ItemProps {
 const Item: React.FC<ItemProps> = ({ source }) => {
   return (
     <Container>
-      <a href="/">
+      <Link to="/">
         <img src={source} alt="source-name" />
-      </a>
+      </Link>
     </Container>
   );
 };

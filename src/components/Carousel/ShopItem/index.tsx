@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { Container } from './styles';
 
@@ -9,9 +10,9 @@ interface ShopItemProps {
 const ShopItem: React.FC<ShopItemProps> = ({ source }) => {
   return (
     <Container>
-      <a href="/">
-        <img src={source} alt="source-name" />
-      </a>
+      <Link to="/">
+        <img src={source} alt={`${source}`} />
+      </Link>
     </Container>
   );
 };
