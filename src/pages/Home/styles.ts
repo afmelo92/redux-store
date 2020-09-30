@@ -1,5 +1,5 @@
+import { shade } from 'polished';
 import styled from 'styled-components';
-import Carousel from 'react-elastic-carousel';
 
 export const Container = styled.div`
   display: flex;
@@ -135,7 +135,6 @@ export const Content = styled.div`
 `;
 
 export const SpotLightCarousel = styled.div`
-  border: 1px solid red;
   padding-right: 5px;
 
   .rec {
@@ -182,9 +181,7 @@ export const SpotLightCarousel = styled.div`
   }
 
   .rec.rec-pagination {
-    position: absolute;
-    top: 85%;
-    left: 45%;
+    display: none;
   }
 
   button.brcpxa {
@@ -209,7 +206,75 @@ export const SpotLightCarousel = styled.div`
 
 export const Footer = styled.footer`
   display: flex;
-  height: 400px;
+  height: 200px;
   width: 100%;
+  padding-top: 20px;
   background: ${props => props.theme.color.primary};
+  align-items: flex-start;
+  justify-content: center;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+
+    a {
+      text-decoration: none;
+      color: ${props => props.theme.color.text};
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    h3 {
+      color: ${props => props.theme.color.secondary};
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    img {
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      input {
+        max-width: 200px;
+        background: none;
+        border: none;
+        color: ${props => props.theme.color.text};
+        margin-bottom: 10px;
+        border-bottom: 1px solid #fff;
+      }
+
+      button {
+        max-width: 200px;
+        background: ${props => props.theme.color.secondary};
+        padding: 5px;
+        color: ${props => props.theme.color.primary};
+        border: 0;
+        border-radius: 5px;
+
+        &:hover {
+          background: ${props => shade(0.2, props.theme.color.secondary)};
+        }
+      }
+    }
+
+    div.social-row {
+      flex-direction: row;
+
+      h3 {
+        margin-top: 20px;
+      }
+      svg {
+        margin-right: 5px;
+      }
+    }
+  }
 `;

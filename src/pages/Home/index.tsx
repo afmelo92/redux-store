@@ -1,7 +1,16 @@
 /* eslint-disable no-unused-expressions */
 import React from 'react';
 import Carousel from 'react-elastic-carousel';
-import { FaRegCreditCard, FaLock } from 'react-icons/fa';
+import {
+  FaRegCreditCard,
+  FaLock,
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+} from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
+import cards from '../../assets/cards.png';
 import Item from '../../components/Carousel/Item';
 import ShopItem from '../../components/Carousel/ShopItem';
 import Header from '../../components/Header';
@@ -151,7 +160,48 @@ const Home: React.FC = () => {
         </Carousel>
       </SpotLightCarousel>
       <Footer>
-        <h1>FOOTER INFO</h1>
+        <div className="company">
+          <h3>INSTITUCIONAL</h3>
+          <Link to="/">Home</Link>
+          <Link to="/">Sobre</Link>
+          <Link to="/">Dúvidas</Link>
+          <Link to="/">Contato</Link>
+        </div>
+        <div className="account">
+          <h3>MINHA CONTA</h3>
+          <Link to="/">Meus dados</Link>
+          <Link to="/">Meus pedidos</Link>
+          <Link to="/">Lista de desejos</Link>
+        </div>
+        <div className="support">
+          <h3>ATENDIMENTO</h3>
+          <p>(11) 94778-5076</p>
+          <p>contato@oficialnaotemcomo.com.br</p>
+
+          <p>Rua General Osório, 62 - cj 71</p>
+          <p>Vila Bocaina - Mauá | SP</p>
+          <p>CEP: 09310-050 </p>
+        </div>
+        <div className="payment">
+          <h3>FORMAS DE PAGAMENTO</h3>
+          <img src={cards} alt="cards" />
+          <h3>SIGA-NOS</h3>
+          <div className="social-row">
+            <FaFacebook size={15} />
+            <FaInstagram size={15} />
+            <FaTwitter size={15} />
+          </div>
+        </div>
+        <div className="news">
+          <h3>NEWSLETTER</h3>
+          <p>Faça seu cadastro para receber nossas dicas</p>
+          <p>novidades e promoções.</p>
+          <form action="user-form">
+            <input type="text" name="name" id="name" placeholder="Seu nome" />
+            <input type="text" name="email" id="email" placeholder="E-mail" />
+            <button type="button">Cadastrar</button>
+          </form>
+        </div>
       </Footer>
     </>
   );

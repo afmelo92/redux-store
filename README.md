@@ -1,6 +1,6 @@
-# REDUX THEME SWITCHER
+# REDUX STORE
 
-Cool theme switcher with redux and typescript
+Sample store with theme switcher, redux and typescript
 
 ## Available Scripts
 
