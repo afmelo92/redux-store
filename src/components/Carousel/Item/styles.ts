@@ -4,7 +4,6 @@ export const Container = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
-  max-height: 842px;
 
   img {
     object-fit: cover;

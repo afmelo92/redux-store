@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Container } from './styles';
 
-interface ItemProps {
+interface ShopItemProps {
   source: string;
 }
 
-const Item: React.FC<ItemProps> = ({ source }) => {
+const ShopItem: React.FC<ShopItemProps> = ({ source }) => {
   return (
     <Container>
       <a href="/">
@@ -16,4 +16,4 @@ const Item: React.FC<ItemProps> = ({ source }) => {
   );
 };
 
-export default Item;
+export default ShopItem;

@@ -2,12 +2,14 @@ import React, { useCallback } from 'react';
 import Switch from 'react-switch';
 import { useDispatch, useSelector } from 'react-redux';
 import { DefaultTheme } from 'styled-components';
+import { FaShoppingCart } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import { IState } from '../../store';
-
-import { Container, Navbar, NavLogo, NavItems } from './styles';
+import { Container, Switcher, Navbar, NavItems, Cart } from './styles';
 import { changeTheme } from '../../store/modules/theme/actions';
 import light from '../../styles/themes/light';
 import dark from '../../styles/themes/dark';
+import logo from '../../assets/logo.png';
 
 const Header: React.FC = () => {
   const themeReducer = useSelector<IState, DefaultTheme>(
@@ -22,17 +24,30 @@ const Header: React.FC = () => {
   }, [dispatch, themeReducer.title]);
 
   return (
-    <Container>
-      <Navbar>
-        <NavLogo>
-          <h1>Ninja Store</h1>
-        </NavLogo>
-        <NavItems>
-          <a href="/">Products</a>
-          <a href="/">Developers</a>
-          <a href="/">Company</a>
-          <a href="/">Contact</a>
-          <Switch
+    <>
+      <Container>
+        <Navbar>
+          <img src={logo} alt="logo" />
+          <NavItems>
+            <Link to="/">
+              <h3>Products</h3>
+            </Link>
+            <Link to="/">
+              <h3>Developers</h3>
+            </Link>
+            <Link to="/">
+              <h3>Contact</h3>
+            </Link>
+          </NavItems>
+
+          <Cart to="/cart">
+            <div>
+              <strong>Meu carrinho</strong>
+              <span>10 itens</span>
+            </div>
+            <FaShoppingCart size={30} />
+          </Cart>
+          <Switcher
             onChange={handleChangeTheme}
             checked={themeReducer.title === 'dark'}
             uncheckedIcon={false}
@@ -41,10 +56,11 @@ const Header: React.FC = () => {
             width={40}
             handleDiameter={20}
             onColor="#f4cf00"
+            className="switcher"
           />
-        </NavItems>
-      </Navbar>
-    </Container>
+        </Navbar>
+      </Container>
+    </>
   );
 };
 
